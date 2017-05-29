@@ -1,0 +1,10 @@
+# Compiled files #
+*.class
+*.jar
+build/
+
+# IntelliJ Settings #
+.idea/
+
+# Gradle settings #
+.gradle
