@@ -7,4 +7,5 @@ build/
 .idea/
 
 # Gradle settings #
-.gradle
+.gradle/git
+.gradle/
