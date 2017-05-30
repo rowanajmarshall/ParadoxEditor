@@ -9,3 +9,5 @@ build/
 # Gradle settings #
 .gradle/git
 .gradle/
+
+**/*.iml
