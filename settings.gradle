@@ -1,2 +1,5 @@
-rootProject.name = 'paradox-editor'
+rootProject.name = 'paradox.editor'
+include 'core'
+include 'user-interface'
+include 'parser'
 
