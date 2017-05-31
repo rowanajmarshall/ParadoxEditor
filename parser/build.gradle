@@ -11,4 +11,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // parboiled
+    compile group: 'org.parboiled', name: 'parboiled-core', version: '1.1.8'
+    compile group: 'org.parboiled', name: 'parboiled-java', version: '1.1.8'
 }
