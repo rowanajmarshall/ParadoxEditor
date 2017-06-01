@@ -23,7 +23,7 @@ apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     // minimal requirement for jfxJar-task
-    mainClass = 'MainController'
+    mainClass = 'FXMLApplication'
 
     // minimal requirement for jfxNative-task
     vendor = 'K&M Enterprises'

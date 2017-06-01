@@ -1,27 +1,22 @@
-/**
- * Created by roan on 30/05/17.
- */
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class MainController extends Application {
+import javax.xml.soap.Text;
+import javafx.event.ActionEvent;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+/**
+ * Created by roan on 31/05/17.
+ */
+public class MainController {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view_res/main.fxml"));
-        Scene scene = new Scene(root, 600, 400);
+    @FXML private Text fileTarget;
 
-        primaryStage.setTitle("Paradox Editor");
-        primaryStage.setScene(scene);
+    @FXML private Stage stage;
 
-        primaryStage.show();
+    @FXML public void handleSaveAsFileButtonAction(ActionEvent actionEvent) {
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Select save file");
+        chooser.showSaveDialog(stage);
     }
 }
