@@ -1,0 +1,36 @@
+rebel_faction={
+	id={
+		id=571
+		type=50
+	}
+	type="noble_rebels"
+	name="Multani Noble Rebels"
+	heretic="Yazidi"
+	country="MUL"
+	religion="sunni"
+	government="feudal_monarchy"
+	province=2079
+	seed=981932888
+	general={
+		name="Bhenji Patidar"
+		dynasty="Patidar"
+		type=general
+		manuever=2
+		shock=1
+		siege=1
+		country="REB"
+		activation=1444.11.11
+		id={
+			id=1604
+			type=49
+		}
+	}
+	leader={
+		id=1604
+		type=49
+	}
+	possible_provinces={
+		2079 2086
+	}
+	active=no
+}
