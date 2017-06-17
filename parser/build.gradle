@@ -10,5 +10,17 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // parboiled
+    compile group: 'org.parboiled', name: 'parboiled-core', version: '1.1.8'
+    compile group: 'org.parboiled', name: 'parboiled-java', version: '1.1.8'
+    compile group: 'com.google.guava', name: 'guava', version: '22.0'
+
+    // testing dependencies
+    testCompile(group: 'junit', name: 'junit', version: '4.12') {
+        exclude group: 'org.hamcrest'
+    }
+
+    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version: 1.3
+    testCompile group: 'com.github.npathai', name: 'hamcrest-optional', version: '1.0'
+
 }
