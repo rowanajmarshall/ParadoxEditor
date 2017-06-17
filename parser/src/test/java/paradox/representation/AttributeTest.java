@@ -1,12 +1,11 @@
 package paradox.representation;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class AttributeLikeTest {
+public class AttributeTest {
 
     @Test
     public void twoAttributesWithTheSameValueShouldBeEqual() {
@@ -16,17 +15,17 @@ public class AttributeLikeTest {
     }
 
     private ObjectAttribute generateAttributeMap() {
-        return new ObjectAttribute(ImmutableMap.of(
-                "list", generateListAttribute(),
-                "string", generateStringAttribute()
+        return new ObjectAttribute("id", ImmutableList.of(
+                generateListAttribute(),
+                generateStringAttribute()
         ));
     }
 
     private ListAttribute generateListAttribute() {
-        return new ListAttribute(ImmutableList.of("a", "b", "c"));
+        return new ListAttribute("list", ImmutableList.of("a", "b", "c"));
     }
 
     private StringAttribute generateStringAttribute() {
-        return new StringAttribute("value");
+        return new StringAttribute("id", "value");
     }
 }
