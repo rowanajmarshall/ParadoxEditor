@@ -6,32 +6,49 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import paradox.SaveGame;
-import paradox.parser.ParadoxFileParser;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
 
-public class FXMLApplication extends Application {
+
+public class ParadoxEditorUI extends Application {
 
     public void begin() {
         launch();
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view_res/main.fxml"));
-        Scene scene = new Scene(root, 600, 400);
+    public void start(Stage primaryStage) throws Exception {
+        Optional<Parent> parent = Optional.ofNullable(getClass().getClassLoader().getResource("view_res/main.fxml"))
+                .flatMap(loc -> {
+                    try {
+                        return Optional.of(FXMLLoader.<Parent>load(loc));
+                    } catch (IOException e) {
+                        return Optional.empty();
+                    }
+                });
 
-        primaryStage.setTitle("Paradox Editor");
-        primaryStage.setScene(scene);
+        if (!parent.isPresent())
+            throw new FileNotFoundException("view_res/main.fxml");
 
-        primaryStage.show();
+        parent.ifPresent(root -> {
+            final Scene scene = new Scene(root, 600, 400);
+
+            primaryStage.setTitle("Paradox Editor");
+            primaryStage.setScene(scene);
+
+            primaryStage.show();
+        });
     }
-d
+
     /**
      * Informs the UI that an error has occurred, and must be shown to the user
      * @param errorMsg
      */
     public void fileNotFoundError(String errorMsg) {
+
     }
 
     /**
@@ -39,6 +56,7 @@ d
      * @param game
      */
     public void loadSaveGame(SaveGame game) {
+
     }
 }
 
