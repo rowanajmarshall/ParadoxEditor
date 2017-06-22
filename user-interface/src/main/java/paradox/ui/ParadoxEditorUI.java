@@ -5,11 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import paradox.SaveGame;
+import paradox.parser.ParadoxFileParser;
+
+import java.io.FileNotFoundException;
 
 public class FXMLApplication extends Application {
 
-    public static void main(String[] args) {
-        launch(args);
+    public void begin() {
+        launch();
     }
 
     @Override
@@ -21,6 +25,20 @@ public class FXMLApplication extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
+    }
+d
+    /**
+     * Informs the UI that an error has occurred, and must be shown to the user
+     * @param errorMsg
+     */
+    public void fileNotFoundError(String errorMsg) {
+    }
+
+    /**
+     * Loads the given SaveGame into the UI, allowing it to be displayed
+     * @param game
+     */
+    public void loadSaveGame(SaveGame game) {
     }
 }
 
