@@ -22,6 +22,7 @@ repositories {
 
 dependencies {
     compile project(':parser')
+    compile group: 'com.google.inject', name: 'guice', version: '4.1.0'
 }
 
 apply plugin: 'javafx-gradle-plugin'
@@ -29,7 +30,7 @@ apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     // minimal requirement for jfxJar-task
-    mainClass = 'paradox.ui.ParadoxEditorUI'
+    mainClass = 'paradox.ui.Application'
 
     // minimal requirement for jfxNative-task
     vendor = 'K&M Enterprises'
