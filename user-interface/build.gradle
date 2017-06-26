@@ -30,7 +30,7 @@ apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     // minimal requirement for jfxJar-task
-    mainClass = 'paradox.ui.Application'
+    mainClass = 'paradox.ui.application.Application'
 
     // minimal requirement for jfxNative-task
     vendor = 'K&M Enterprises'
