@@ -1,4 +1,4 @@
-package paradox.ui;
+package paradox.ui.application;
 
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;

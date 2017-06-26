@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.web.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import paradox.ui.views.ToolBar?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paradox.ui.MainController">
-   <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="File" >
-            <items>
-                  <MenuItem mnemonicParsing="false" text="Open" onAction="#handleOpenButtonAction"/>
-                  <MenuItem mnemonicParsing="false" text="Save"  />
-                  <MenuItem mnemonicParsing="false" text="Save as..." onAction="#handleSaveAsFileButtonAction" />
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Search">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="By name..." />
-
-                </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-      <TextArea prefHeight="200.0" prefWidth="200.0" />
-   </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paradox.ui.application.MainController">
+    <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
+    <!--<TextArea prefHeight="200.0" prefWidth="200.0"/>-->
 </VBox>

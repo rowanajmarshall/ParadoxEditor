@@ -1,4 +1,6 @@
-package paradox.ui;
+package paradox.ui.application;
+
+import paradox.ui.views.ParadoxEditorView;
 
 public class Application {
 
